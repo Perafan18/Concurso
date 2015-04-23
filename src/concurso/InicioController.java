@@ -10,14 +10,24 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 
 /**
  *
  * @author pedro
  */
 public class InicioController implements Initializable {
-    
+    @FXML private MenuItem venta;
+    private Concurso ProgramaPrincipal;
+
+    @FXML
+    private void nuevaVentana(ActionEvent event) {
+        ProgramaPrincipal.mostrarVentanaSecundaria();
+    }
+
+    public void setProgramaPrincipal(Concurso ProgramaPrincipal) {
+        this.ProgramaPrincipal = ProgramaPrincipal;
+    }
 
     
     @Override
